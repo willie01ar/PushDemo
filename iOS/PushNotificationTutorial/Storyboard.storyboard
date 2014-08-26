@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3b2-Fo-DKQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gqC-UB-OL2">
+            <objects>
+                <viewController id="3b2-Fo-DKQ" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="joR-TG-4ON"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lo3-68-cyg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YQl-Xi-YcB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Push Demo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="M1v-DQ-eSq">
+                                <rect key="frame" x="19" y="44" width="280" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Wpi-Lz-yJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlL-Ll-J2I">
+                                <rect key="frame" x="19" y="125" width="280" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="CMR-rh-dej"/>
+                                </constraints>
+                                <state key="normal" title="Broadcast Push Notification!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="broadcastPushNotification:" destination="3b2-Fo-DKQ" eventType="touchUpInside" id="Gva-7v-uOl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Para notificaciones dirigidas seleccione su genero y edad" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Ww4-OQ-owu">
+                                <rect key="frame" x="19" y="231" width="280" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-ab-bFQ">
+                                <rect key="frame" x="130" y="326" width="161" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="hri-cm-uKq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Hombre"/>
+                                    <segment title="Mujer"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateInstallation:" destination="3b2-Fo-DKQ" eventType="valueChanged" id="jCS-BU-cdJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Genero" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-8w-rf6">
+                                <rect key="frame" x="27" y="329" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="35" minValue="18" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-pg-Djv">
+                                <rect key="frame" x="25" y="404" width="268" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S5M-Re-sjD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateAgeLabel:" destination="3b2-Fo-DKQ" eventType="valueChanged" id="dVF-HX-8OO"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-Mc-VfX">
+                                <rect key="frame" x="130" y="368" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="tvr-yS-kLd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Edad:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HB-iI-MGz">
+                                <rect key="frame" x="73" y="368" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VvK-Ef-w0o"/>
+                                    <constraint firstAttribute="width" constant="42" id="kb7-2v-Rdr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZlL-Ll-J2I" firstAttribute="trailing" secondItem="Ww4-OQ-owu" secondAttribute="trailing" id="7Sh-9h-apS"/>
+                            <constraint firstItem="7g7-Mc-VfX" firstAttribute="top" secondItem="vnY-ab-bFQ" secondAttribute="bottom" constant="14" id="Ae2-th-SFb"/>
+                            <constraint firstItem="Bek-pg-Djv" firstAttribute="top" secondItem="8HB-iI-MGz" secondAttribute="bottom" constant="15" id="CHf-Oz-0no"/>
+                            <constraint firstItem="8HB-iI-MGz" firstAttribute="leading" secondItem="YQl-Xi-YcB" secondAttribute="leadingMargin" constant="57" id="EBi-Oc-fw8"/>
+                            <constraint firstItem="4Wp-8w-rf6" firstAttribute="leading" secondItem="Bek-pg-Djv" secondAttribute="leading" id="F65-xt-qYP"/>
+                            <constraint firstItem="8HB-iI-MGz" firstAttribute="trailing" secondItem="4Wp-8w-rf6" secondAttribute="trailing" id="FEw-kB-Kfn"/>
+                            <constraint firstItem="7g7-Mc-VfX" firstAttribute="top" secondItem="8HB-iI-MGz" secondAttribute="top" id="Hq3-Uw-Ff5"/>
+                            <constraint firstItem="8HB-iI-MGz" firstAttribute="bottom" secondItem="7g7-Mc-VfX" secondAttribute="bottom" id="KOT-BU-det"/>
+                            <constraint firstItem="M1v-DQ-eSq" firstAttribute="leading" secondItem="YQl-Xi-YcB" secondAttribute="leadingMargin" constant="3" id="KPj-fy-ZEB"/>
+                            <constraint firstItem="8HB-iI-MGz" firstAttribute="top" secondItem="4Wp-8w-rf6" secondAttribute="bottom" constant="18" id="MBY-j4-Z2x"/>
+                            <constraint firstItem="Lo3-68-cyg" firstAttribute="top" secondItem="Bek-pg-Djv" secondAttribute="bottom" constant="166" id="N0Q-V6-NTZ"/>
+                            <constraint firstItem="vnY-ab-bFQ" firstAttribute="trailing" secondItem="Bek-pg-Djv" secondAttribute="trailing" id="Oxl-9D-o8n"/>
+                            <constraint firstItem="ZlL-Ll-J2I" firstAttribute="leading" secondItem="Ww4-OQ-owu" secondAttribute="leading" id="Ssk-5M-tGJ"/>
+                            <constraint firstItem="Ww4-OQ-owu" firstAttribute="centerX" secondItem="Bek-pg-Djv" secondAttribute="centerX" id="XdK-RF-0bP"/>
+                            <constraint firstItem="ZlL-Ll-J2I" firstAttribute="top" secondItem="M1v-DQ-eSq" secondAttribute="bottom" constant="34" id="bz9-iK-TfZ"/>
+                            <constraint firstItem="M1v-DQ-eSq" firstAttribute="top" secondItem="joR-TG-4ON" secondAttribute="bottom" constant="24" id="cNx-gX-rcN"/>
+                            <constraint firstItem="4Wp-8w-rf6" firstAttribute="leading" secondItem="YQl-Xi-YcB" secondAttribute="leadingMargin" constant="11" id="dS2-ax-gX3"/>
+                            <constraint firstItem="ZlL-Ll-J2I" firstAttribute="trailing" secondItem="M1v-DQ-eSq" secondAttribute="trailing" id="fGi-mZ-8Mf"/>
+                            <constraint firstItem="vnY-ab-bFQ" firstAttribute="top" secondItem="Ww4-OQ-owu" secondAttribute="bottom" constant="18" id="fPy-f1-ngn"/>
+                            <constraint firstItem="M1v-DQ-eSq" firstAttribute="leading" secondItem="ZlL-Ll-J2I" secondAttribute="leading" id="i7d-d5-Gwh"/>
+                            <constraint firstItem="4Wp-8w-rf6" firstAttribute="top" secondItem="Ww4-OQ-owu" secondAttribute="bottom" constant="21" id="jCa-LO-UNK"/>
+                            <constraint firstItem="vnY-ab-bFQ" firstAttribute="leading" secondItem="4Wp-8w-rf6" secondAttribute="trailing" constant="15" id="m3t-hy-Dz1"/>
+                            <constraint firstItem="vnY-ab-bFQ" firstAttribute="leading" secondItem="7g7-Mc-VfX" secondAttribute="leading" id="pm4-e1-m4i"/>
+                            <constraint firstItem="Ww4-OQ-owu" firstAttribute="top" secondItem="ZlL-Ll-J2I" secondAttribute="bottom" constant="54" id="ytX-74-ZGl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageControl" destination="Bek-pg-Djv" id="aUA-gB-qFz"/>
+                        <outlet property="ageLabel" destination="7g7-Mc-VfX" id="NkW-jN-bgf"/>
+                        <outlet property="genderControl" destination="vnY-ab-bFQ" id="fOa-hZ-QZQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUe-IT-6sS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="327"/>
+        </scene>
+    </scenes>
+</document>
